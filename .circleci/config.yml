@@ -38,6 +38,9 @@ jobs:
           path: ~/rails-docker-kyt
       - ruby/install-deps
       - run:
+          name: Bundle install
+          command: bundle install
+      - run:
           name: Database setup
           command: bundle exec rails db:migrate
       - run:
